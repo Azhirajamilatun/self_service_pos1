@@ -39,4 +39,4 @@ Route::get('/profile', function () {
     return view('profile.index', compact('nama'));
 });
 
-Route::resource('/product', 'App\http\controllers\Productcontroller');a
+Route::resource('/product', 'App\http\controllers\Productcontroller');
