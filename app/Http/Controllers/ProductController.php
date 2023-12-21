@@ -12,6 +12,9 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+    //public function_construct(){
+   //$this->middleware ('user')->except('destroy');
+//} 
     /**
      * index
      *
