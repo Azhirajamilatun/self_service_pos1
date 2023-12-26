@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+Route::get('product', 'App\http\Controllers\ApiController@product_index');
+Route::post('product/add', 'App\Http\Controllers\ApiController@product_store');
+Route::get('product/{id}', 'App\Http\Controllers\ApiController@product_by_id');
+Route::get('product/delete/{id}', 'App\Http\Controllers\ApiController@product_delete');
+Route::put('produk/update/{id}', 'App\Http\Controllers\ApiController@produk_update'); // Adding the update route
+
+
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
