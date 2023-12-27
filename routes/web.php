@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController; // Perubahan: UserController ditambahkan 's' pada Controllers
 use App\Http\Controllers\ProdukController; // Perubahan: ProdukController ditambahkan 's' pada Controllers
-
+use App\Http\Controllers\CategoryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -54,3 +54,6 @@ Route::middleware(['auth', 'user', 'admin'])->group(function() {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('category/create',[App\Http\Controllers\CategoryController::class,'create']);
+Route::post('category/create',[App\Http\Controllers\CategoryController::class,'store']);
+
